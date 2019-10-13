@@ -1,8 +1,13 @@
 <?php
 
-Route::redirect('/', '/login');
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('categories/{category}', 'CategoryController@show')->name('categories.show');
+Route::get('tags/{tag}', 'TagController@show')->name('tags.show');
+Route::resource('articles', 'ArticleController')->only(['index', 'show']);
+Route::get('faq', 'FaqController@index')->name('faq.index');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');

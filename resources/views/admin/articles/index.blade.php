@@ -38,6 +38,9 @@
                             {{ trans('cruds.article.fields.tags') }}
                         </th>
                         <th>
+                            {{ trans('cruds.article.fields.views_count') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -66,6 +69,9 @@
                                 @foreach($article->tags as $key => $item)
                                     <span class="badge badge-info">{{ $item->name }}</span>
                                 @endforeach
+                            </td>
+                            <td>
+                                {{ $article->views_count ?? '' }}
                             </td>
                             <td>
                                 @can('article_show')
