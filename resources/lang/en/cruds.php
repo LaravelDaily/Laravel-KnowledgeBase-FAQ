@@ -113,6 +113,8 @@ return [
             'categories_helper' => '',
             'tags'              => 'Tags',
             'tags_helper'       => '',
+            'views_count'       => 'Views Count',
+            'views_count_helper'=> '',
             'created_at'        => 'Created at',
             'created_at_helper' => '',
             'updated_at'        => 'Updated at',

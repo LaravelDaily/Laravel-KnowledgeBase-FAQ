@@ -21,6 +21,7 @@ class Article extends Model
         'title',
         'full_text',
         'short_text',
+        'views_count',
         'created_at',
         'updated_at',
         'deleted_at',
