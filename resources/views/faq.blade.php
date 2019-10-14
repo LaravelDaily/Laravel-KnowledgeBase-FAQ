@@ -10,24 +10,41 @@
             <hr class="style-three">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        @foreach($questions as $question)
+                    <div class="panel-group" id="accordionCategories" role="tablist" aria-multiselectable="true">
+                        @foreach($categories as $category)
                             <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="heading-{{ $question->id }}">
+                                <div class="panel-heading" role="tab" id="headingCategory{{ $category->id }}">
                                     <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ $question->id }}" aria-expanded="true" aria-controls="collapse-{{$question->id}}">
-                                            {{ $question->question }}
+                                        <a role="button" data-toggle="collapse" data-parent="#accordionCategories" href="#collapseCategory{{ $category->id }}" aria-expanded="true" aria-controls="collapseCategory{{$category->id}}">
+                                            {{ $category->category }}
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapse-{{ $question->id }}" class="panel-collapse collapse{{ $loop->first ? ' in' : '' }}" role="tabpanel" aria-labelledby="heading-{{ $question->id }}">
+                                <div id="collapseCategory{{ $category->id }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingCategory{{ $category->id }}">
                                     <div class="panel-body">
-                                        {{ $question->answer }}
+                                        <div class="panel-group" id="accordionQuestions{{ $category->id }}" role="tablist" aria-multiselectable="true">
+                                            @foreach($category->faqQuestions as $question)
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="headingQuestion{{ $question->id }}">
+                                                        <h4 class="panel-title">
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordionQuestions{{ $category->id }}" href="#collapseQuestion{{ $question->id }}" aria-expanded="true" aria-controls="collapseQuestion{{$question->id}}">
+                                                                {{ $question->question }}
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseQuestion{{ $question->id }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQuestion{{ $question->id }}">
+                                                        <div class="panel-body">
+                                                            {{ $question->answer }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
-                    </div>
+                    </div>  
                 </div>
             </div>
         </div>

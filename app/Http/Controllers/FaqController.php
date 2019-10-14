@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\FaqQuestion;
-use Illuminate\Http\Request;
+use App\FaqCategory;
 
 class FaqController extends Controller
 {
     public function index()
     {
-        $questions = FaqQuestion::paginate(10);
+        $categories = FaqCategory::with('faqQuestions')
+            ->paginate(10);
 
-        return view('faq', compact('questions'));
+        return view('faq', compact('categories'));
     }
 }

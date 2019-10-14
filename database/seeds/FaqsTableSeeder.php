@@ -15,14 +15,18 @@ class FaqsTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        $category = FaqCategory::create(['category' => 'Main']);
+        $categories = ['System usage', 'Integrations', 'Payments'];
 
-        foreach(range(1,5) as $id)
+        foreach($categories as $category)
         {
-            $question = new FaqQuestion;
-            $question->question = $faker->sentence;
-            $question->answer = $faker->paragraph;
-            $category->faqQuestions()->save($question);
+            $category = FaqCategory::create(['category' => $category]);
+            foreach(range(1,5) as $id)
+            {
+                $question = new FaqQuestion;
+                $question->question = $faker->sentence;
+                $question->answer = $faker->paragraph;
+                $category->faqQuestions()->save($question);
+            }
         }
     }
 }
