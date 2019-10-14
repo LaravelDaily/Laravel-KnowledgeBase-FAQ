@@ -5,6 +5,7 @@ use Illuminate\Database\Seeder;
 use App\Article;
 use App\Category;
 use App\Tag;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class ArticlesTableSeeder extends Seeder
 {
@@ -23,6 +24,7 @@ class ArticlesTableSeeder extends Seeder
         {
             $article = new Article;
             $article->title = $faker->sentence;
+            $article->slug = SlugService::createSlug(Article::class, 'slug', $article->title);
             $article->short_text = $faker->paragraph;
             $article->full_text = $faker->paragraph(9);
             $article->views_count = rand(0, 1000);

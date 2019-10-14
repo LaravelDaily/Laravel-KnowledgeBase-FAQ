@@ -2,6 +2,7 @@
 
 use App\Tag;
 use Illuminate\Database\Seeder;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class TagsTableSeeder extends Seeder
 {
@@ -15,6 +16,9 @@ class TagsTableSeeder extends Seeder
         $faker = Faker\Factory::create();
 
         foreach(range(1, 30) as $id)
-            Tag::create(['name' => $faker->word]);
+        {
+            $word = $faker->word;
+            Tag::create(['name' => $word, 'slug' => SlugService::createSlug(Tag::class, 'slug', $word)]);
+        }
     }
 }

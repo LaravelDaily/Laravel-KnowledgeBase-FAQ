@@ -25,7 +25,7 @@
         @foreach($category->articles as $article)
             <div class="panel panel-default">
                 <div class="article-heading-abb">
-                    <a href="{{ route('articles.show', $article->id) }}">
+                    <a href="{{ route('articles.show', [$article->slug, $article->id]) }}">
                         <i class="fa fa-pencil-square-o"></i> {{ $article->title }} </a>
                 </div>
                 <div class="article-info">
@@ -44,7 +44,7 @@
                     </p>
                 </div>
                 <div class="article-read-more">
-                    <a href="{{ route('articles.show', $article->id) }}" class="btn btn-default btn-wide">Read more...</a>
+                    <a href="{{ route('articles.show', [$article->slug, $article->id]) }}" class="btn btn-default btn-wide">Read more...</a>
                 </div>
             </div>
         @endforeach

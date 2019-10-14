@@ -26,6 +26,14 @@
                             {{ $category->name }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.category.fields.slug') }}
+                        </th>
+                        <td>
+                            {{ $category->slug }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <a style="margin-top:20px;" class="btn btn-default" href="{{ url()->previous() }}">

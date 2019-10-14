@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
 use App\Category;
+use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function show(Category $category)
+    public function show($slug, Category $category)
     {
         $category->loadCount('articles');
 
@@ -15,5 +16,12 @@ class CategoryController extends Controller
             ->paginate(5);
      
         return view('categories.show', compact(['category', 'articles']));
+    }
+
+    public function check_slug(Request $request)
+    {
+        $slug = SlugService::createSlug(Category::class, 'slug', $request->input('name',''));
+
+        return response()->json(['slug' => $slug]);
     }
 }

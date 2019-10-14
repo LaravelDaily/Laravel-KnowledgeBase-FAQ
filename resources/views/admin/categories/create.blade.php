@@ -21,6 +21,18 @@
                     {{ trans('cruds.category.fields.name_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('slug') ? 'has-error' : '' }}">
+                <label for="slug">{{ trans('cruds.category.fields.slug') }}*</label>
+                <input type="text" id="slug" name="slug" class="form-control" value="{{ old('slug', isset($category) ? $category->slug : '') }}" required>
+                @if($errors->has('slug'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('slug') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.category.fields.slug_helper') }}
+                </p>
+            </div>
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>
@@ -29,4 +41,17 @@
 
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+  $('input[name="name"]').change(function(e) {
+    $.get('{{ route('categories.check_slug') }}', 
+      { 'name': $(this).val() }, 
+      function( data ) {
+        $('input[name="slug"]').val(data.slug);
+      }
+    );
+  });
+</script>
 @endsection

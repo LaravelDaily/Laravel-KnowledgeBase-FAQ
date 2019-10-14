@@ -12,7 +12,7 @@
                 @foreach($categories as $category)
                     <div class="col-md-6 margin-bottom-20">
                         <div class="fat-heading-abb">
-                            <a href="{{ route('categories.show', $category->id) }}">
+                            <a href="{{ route('categories.show', [$category->slug, $category->id]) }}">
                                 <i class="fa fa-folder"></i> {{ $category->name }}
                                 <span class="cat-count">({{ $category->articles_count }})</span>
                             </a>
@@ -24,7 +24,7 @@
                                         @break
                                     @endif
                                     <li>
-                                        <a href="{{ route('articles.show', $article->id) }}">
+                                        <a href="{{ route('articles.show', [$article->slug, $article->id]) }}">
                                             <i class="fa fa-file-text-o"></i> {{ $article->title }}
                                         </a>
                                     </li>

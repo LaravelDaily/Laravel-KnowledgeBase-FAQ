@@ -15,7 +15,7 @@
                     <a href="{{ route('home') }}">Knowledge Base</a>
                 </li>
                 <li>
-                    <a href="{{ route('categories.show', $article->categories->first()->id) }}">{{ $article->categories->first()->name }} @if($article->categories_count > 1) + {{ $article->categories_count-1 }} more @endif</a>
+                    <a href="{{ route('categories.show', [$article->categories->first()->slug, $article->categories->first()->id]) }}">{{ $article->categories->first()->name }} @if($article->categories_count > 1) + {{ $article->categories_count-1 }} more @endif</a>
                 </li>
                 <li class="active">{{ $article->title }}</li>
             </ol>
@@ -44,7 +44,7 @@
                     <div class="article-tags">
                         <b>Tags:</b>
                         @foreach($article->tags as $tag)
-                            <a href="{{ route('tags.show', $tag->id) }}" class="btn btn-default btn-o btn-sm">{{ $tag->name }}</a>
+                            <a href="{{ route('tags.show', [$tag->slug, $tag->id]) }}" class="btn btn-default btn-o btn-sm">{{ $tag->name }}</a>
                         @endforeach
                     </div>
                 </div>

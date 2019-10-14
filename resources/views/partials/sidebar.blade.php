@@ -19,7 +19,7 @@
                 <ul>
                     @foreach ($popularArticles as $article)
                         <li>
-                            <a href="{{ route('articles.show', $article->id) }}">
+                            <a href="{{ route('articles.show', [$article->slug, $article->id]) }}">
                                 <i class="fa fa-file-text-o"></i> {{ $article->title }}
                             </a>
                         </li>
@@ -39,7 +39,7 @@
                 <ul>
                     @foreach ($latestArticles as $article)
                         <li>
-                            <a href="{{ route('articles.show', $article->id) }}">
+                            <a href="{{ route('articles.show', [$article->slug, $article->id]) }}">
                                 <i class="fa fa-file-text-o"></i> {{ $article->title }}
                             </a>
                         </li>
@@ -57,7 +57,7 @@
             <hr class="style-three">
             <div class="fat-content-tags padding-left-10">
                 @foreach ($popularTags as $tag)
-                    <a href="{{ route('tags.show', $tag->id) }}" class="btn btn-default btn-o btn-sm">{{ $tag->name }}</a>
+                    <a href="{{ route('tags.show', [$tag->slug, $tag->id]) }}" class="btn btn-default btn-o btn-sm">{{ $tag->name }}</a>
                 @endforeach
             </div>
         </div>

@@ -20,7 +20,7 @@
                     <ul>
                         @foreach($footerCategories as $category)
                             <li>
-                                <a href="{{ route('categories.show', $category->id) }}">{{ $category->name }}</a>
+                                <a href="{{ route('categories.show', [$category->slug, $category->id]) }}">{{ $category->name }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -35,7 +35,7 @@
                     <ul>
                         @foreach($popularArticles as $article)
                             <li>
-                                <a href="{{ route('articles.show', $article->id) }}">{{ $article->title }}</a>
+                                <a href="{{ route('articles.show', [$article->slug, $article->id]) }}">{{ $article->title }}</a>
                             </li>
                         @endforeach
                     </ul>

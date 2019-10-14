@@ -22,6 +22,9 @@ class UpdateCategoryRequest extends FormRequest
             'name' => [
                 'required',
             ],
+            'slug' => [
+                'required', 'unique:categories'
+            ],
         ];
     }
 }

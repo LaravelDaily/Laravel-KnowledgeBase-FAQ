@@ -29,6 +29,9 @@
                             {{ trans('cruds.tag.fields.name') }}
                         </th>
                         <th>
+                            {{ trans('cruds.tag.fields.slug') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -44,6 +47,9 @@
                             </td>
                             <td>
                                 {{ $tag->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $tag->slug ?? '' }}
                             </td>
                             <td>
                                 @can('tag_show')

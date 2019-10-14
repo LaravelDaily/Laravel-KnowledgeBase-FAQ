@@ -2,12 +2,13 @@
 
 namespace App;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Sluggable;
 
     public $table = 'categories';
 
@@ -19,6 +20,7 @@ class Category extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -27,5 +29,14 @@ class Category extends Model
     public function articles()
     {
         return $this->belongsToMany(Article::class);
+    }
+    
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
     }
 }

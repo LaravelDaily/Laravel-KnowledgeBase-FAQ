@@ -29,6 +29,9 @@
                             {{ trans('cruds.article.fields.title') }}
                         </th>
                         <th>
+                            {{ trans('cruds.article.fields.slug') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.article.fields.short_text') }}
                         </th>
                         <th>
@@ -56,6 +59,9 @@
                             </td>
                             <td>
                                 {{ $article->title ?? '' }}
+                            </td>
+                            <td>
+                                {{ $article->slug ?? '' }}
                             </td>
                             <td>
                                 {{ $article->short_text ?? '' }}

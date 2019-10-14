@@ -29,6 +29,9 @@
                             {{ trans('cruds.category.fields.name') }}
                         </th>
                         <th>
+                            {{ trans('cruds.category.fields.slug') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -44,6 +47,9 @@
                             </td>
                             <td>
                                 {{ $category->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $category->slug ?? '' }}
                             </td>
                             <td>
                                 @can('category_show')

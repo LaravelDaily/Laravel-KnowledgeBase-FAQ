@@ -22,6 +22,9 @@ class StoreArticleRequest extends FormRequest
             'title'        => [
                 'required',
             ],
+            'slug'        => [
+                'required', 'unique:articles'
+            ],
             'categories.*' => [
                 'integer',
             ],

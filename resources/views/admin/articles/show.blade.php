@@ -28,6 +28,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.article.fields.slug') }}
+                        </th>
+                        <td>
+                            {{ $article->slug }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.article.fields.short_text') }}
                         </th>
                         <td>

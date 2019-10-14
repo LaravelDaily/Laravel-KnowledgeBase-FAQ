@@ -21,6 +21,18 @@
                     {{ trans('cruds.article.fields.title_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('slug') ? 'has-error' : '' }}">
+                <label for="slug">{{ trans('cruds.article.fields.slug') }}*</label>
+                <input type="text" id="slug" name="slug" class="form-control" value="{{ old('slug', isset($article) ? $article->slug : '') }}" required>
+                @if($errors->has('slug'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('slug') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.article.fields.slug_helper') }}
+                </p>
+            </div>
             <div class="form-group {{ $errors->has('short_text') ? 'has-error' : '' }}">
                 <label for="short_text">{{ trans('cruds.article.fields.short_text') }}</label>
                 <textarea id="short_text" name="short_text" class="form-control ">{{ old('short_text', isset($article) ? $article->short_text : '') }}</textarea>
@@ -89,4 +101,17 @@
 
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+  $('input[name="title"]').change(function(e) {
+    $.get('{{ route('articles.check_slug') }}', 
+      { 'title': $(this).val() }, 
+      function( data ) {
+        $('input[name="slug"]').val(data.slug);
+      }
+    );
+  });
+</script>
 @endsection
