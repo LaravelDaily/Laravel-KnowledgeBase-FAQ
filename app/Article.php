@@ -24,14 +24,15 @@ class Article extends Model
         'full_text',
         'short_text',
         'views_count',
+        'category_id',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
 
-    public function categories()
+    public function category()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function tags()

@@ -17,13 +17,12 @@ class ArticlesApiController extends Controller
     {
         abort_if(Gate::denies('article_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return new ArticleResource(Article::with(['categories', 'tags'])->get());
+        return new ArticleResource(Article::with(['category', 'tags'])->get());
     }
 
     public function store(StoreArticleRequest $request)
     {
         $article = Article::create($request->all());
-        $article->categories()->sync($request->input('categories', []));
         $article->tags()->sync($request->input('tags', []));
 
         return (new ArticleResource($article))
@@ -35,13 +34,12 @@ class ArticlesApiController extends Controller
     {
         abort_if(Gate::denies('article_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return new ArticleResource($article->load(['categories', 'tags']));
+        return new ArticleResource($article->load(['category', 'tags']));
     }
 
     public function update(UpdateArticleRequest $request, Article $article)
     {
         $article->update($request->all());
-        $article->categories()->sync($request->input('categories', []));
         $article->tags()->sync($request->input('tags', []));
 
         return (new ArticleResource($article))

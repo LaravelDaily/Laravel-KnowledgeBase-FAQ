@@ -58,22 +58,20 @@
                     {{ trans('cruds.article.fields.full_text_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('categories') ? 'has-error' : '' }}">
-                <label for="categories">{{ trans('cruds.article.fields.categories') }}
-                    <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
-                    <span class="btn btn-info btn-xs deselect-all">{{ trans('global.deselect_all') }}</span></label>
-                <select name="categories[]" id="categories" class="form-control select2" multiple="multiple">
+            <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
+                <label for="category_id">{{ trans('cruds.article.fields.category') }}</label>
+                <select name="category_id" id="category_id" class="form-control select2">
                     @foreach($categories as $id => $categories)
-                        <option value="{{ $id }}" {{ (in_array($id, old('categories', [])) || isset($article) && $article->categories->contains($id)) ? 'selected' : '' }}>{{ $categories }}</option>
+                        <option value="{{ $id }}" {{ (old('category_id', 0) == $id || isset($article) && $article->category->id == $id) ? 'selected' : '' }}>{{ $categories }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('categories'))
+                @if($errors->has('category_id'))
                     <em class="invalid-feedback">
-                        {{ $errors->first('categories') }}
+                        {{ $errors->first('category_id') }}
                     </em>
                 @endif
                 <p class="helper-block">
-                    {{ trans('cruds.article.fields.categories_helper') }}
+                    {{ trans('cruds.article.fields.category_helper') }}
                 </p>
             </div>
             <div class="form-group {{ $errors->has('tags') ? 'has-error' : '' }}">

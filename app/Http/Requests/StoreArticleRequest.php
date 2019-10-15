@@ -25,12 +25,6 @@ class StoreArticleRequest extends FormRequest
             'slug'        => [
                 'required', 'unique:articles'
             ],
-            'categories.*' => [
-                'integer',
-            ],
-            'categories'   => [
-                'array',
-            ],
             'tags.*'       => [
                 'integer',
             ],

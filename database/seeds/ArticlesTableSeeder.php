@@ -28,10 +28,10 @@ class ArticlesTableSeeder extends Seeder
             $article->short_text = $faker->paragraph;
             $article->full_text = $faker->paragraph(9);
             $article->views_count = rand(0, 1000);
+            $article->category_id = $categories->random();
             $article->save();
 
             $article->tags()->sync($tags->random(rand(1, $tags->count())));
-            $article->categories()->sync($categories->random(rand(1, $categories->count())));
         }
     }
 }

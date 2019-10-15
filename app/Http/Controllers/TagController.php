@@ -13,8 +13,7 @@ class TagController extends Controller
         $tag->loadCount('articles');
 
         $articles = $tag->articles()
-            ->with('categories')
-            ->withCount('categories')
+            ->with('category')
             ->orderBy('id', 'desc')
             ->paginate(5);
 

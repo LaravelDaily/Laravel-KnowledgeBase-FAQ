@@ -23,13 +23,7 @@ class UpdateArticleRequest extends FormRequest
                 'required',
             ],
             'slug'        => [
-                'required', 'unique:articles'
-            ],
-            'categories.*' => [
-                'integer',
-            ],
-            'categories'   => [
-                'array',
+                'required', 'unique:articles,slug,'.$this->route('article')->id
             ],
             'tags.*'       => [
                 'integer',

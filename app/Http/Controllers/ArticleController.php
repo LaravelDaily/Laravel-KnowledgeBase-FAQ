@@ -10,8 +10,7 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles = Article::with('categories')
-            ->withCount('categories')
+        $articles = Article::with('category')
             ->orderBy('id', 'desc')
             ->paginate(5);
 
@@ -20,8 +19,8 @@ class ArticleController extends Controller
 
     public function show($slug, $article)
     {
-        $article = Article::with(['tags', 'categories'])
-            ->withCount(['tags', 'categories'])
+        $article = Article::with(['tags', 'category'])
+            ->withCount('tags')
             ->whereId($article)
             ->first();
 

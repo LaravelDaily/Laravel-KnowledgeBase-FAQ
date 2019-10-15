@@ -52,12 +52,12 @@
                     </tr>
                     <tr>
                         <th>
-                            Categories
+                            {{ trans('cruds.article.fields.category') }}
                         </th>
                         <td>
-                            @foreach($article->categories as $id => $categories)
-                                <span class="label label-info label-many">{{ $categories->name }}</span>
-                            @endforeach
+                            @if($article->category->count())
+                                <span class="label label-info label-many">{{ $article->category->name }}</span>
+                            @endif
                         </td>
                     </tr>
                     <tr>

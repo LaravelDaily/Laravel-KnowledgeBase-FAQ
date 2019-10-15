@@ -31,9 +31,11 @@
                     <div class="art-date">
                         <i class="fa fa-calendar-o"></i> {{ $article->created_at }}
                     </div>
-                    @if($article->categories->count())
+                    @if($article->category->count())
                         <div class="art-category">
-                            <i class="fa fa-folder"></i> {{ $article->categories->first()->name }} @if($article->categories_count > 1) + {{ $article->categories_count-1 }} more @endif
+                            <a href="{{ route('categories.show', [$article->category->slug, $article->category->id]) }}">
+                                <i class="fa fa-folder"></i> {{ $article->category->name }}
+                            </a>
                         </div>
                     @endif
                 </div>

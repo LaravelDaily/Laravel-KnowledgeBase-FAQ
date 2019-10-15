@@ -35,7 +35,7 @@
                             {{ trans('cruds.article.fields.short_text') }}
                         </th>
                         <th>
-                            {{ trans('cruds.article.fields.categories') }}
+                            {{ trans('cruds.article.fields.category') }}
                         </th>
                         <th>
                             {{ trans('cruds.article.fields.tags') }}
@@ -67,9 +67,9 @@
                                 {{ $article->short_text ?? '' }}
                             </td>
                             <td>
-                                @foreach($article->categories as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                @if($article->category->count())
+                                    <span class="badge badge-info">{{ $article->category->name }}</span>
+                                @endif
                             </td>
                             <td>
                                 @foreach($article->tags as $key => $item)

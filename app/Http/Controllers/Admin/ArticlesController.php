@@ -38,7 +38,6 @@ class ArticlesController extends Controller
     public function store(StoreArticleRequest $request)
     {
         $article = Article::create($request->all());
-        $article->categories()->sync($request->input('categories', []));
         $article->tags()->sync($request->input('tags', []));
 
         return redirect()->route('admin.articles.index');
@@ -52,7 +51,7 @@ class ArticlesController extends Controller
 
         $tags = Tag::all()->pluck('name', 'id');
 
-        $article->load('categories', 'tags');
+        $article->load('category', 'tags');
 
         return view('admin.articles.edit', compact('categories', 'tags', 'article'));
     }
@@ -60,7 +59,6 @@ class ArticlesController extends Controller
     public function update(UpdateArticleRequest $request, Article $article)
     {
         $article->update($request->all());
-        $article->categories()->sync($request->input('categories', []));
         $article->tags()->sync($request->input('tags', []));
 
         return redirect()->route('admin.articles.index');
@@ -70,7 +68,7 @@ class ArticlesController extends Controller
     {
         abort_if(Gate::denies('article_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $article->load('categories', 'tags');
+        $article->load('category', 'tags');
 
         return view('admin.articles.show', compact('article'));
     }
