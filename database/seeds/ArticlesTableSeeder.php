@@ -20,7 +20,7 @@ class ArticlesTableSeeder extends Seeder
         $categories = Category::pluck('id');
         $tags = Tag::pluck('id');
 
-        foreach(range(1,10) as $id)
+        foreach(range(1,25) as $id)
         {
             $article = new Article;
             $article->title = $faker->sentence;
