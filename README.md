@@ -1,6 +1,6 @@
-# Laravel Knowledge Base FAQ with Adminpanel
+# Laravel 6 Knowledge Base FAQ with Adminpanel
 
-Transformed [free Bootstrap theme](https://github.com/sunnyg1210/bootstrapKnowledgeBaseTheme) into fully manageable Laravel project with adminpanel generated with [QuickAdminPanel](https://quickadminpanel.com), 
+Transformed [free Bootstrap theme](https://github.com/sunnyg1210/bootstrapKnowledgeBaseTheme) into fully manageable Laravel 6 project with adminpanel generated with [QuickAdminPanel](https://quickadminpanel.com), 
 to manage all the articles, categories.
 
 Also added SEO important stuff like Articles Slugs in URLs.
@@ -10,6 +10,8 @@ Also added SEO important stuff like Articles Slugs in URLs.
 ## Front-side Screenshots 
 
 ![Laravel Knowledge Base FAQ Home](https://laraveldaily.com/wp-content/uploads/2019/10/Screen-Shot-2019-10-16-at-6.25.56-PM.png)
+
+- - - - -
 
 ![Laravel Knowledge Base FAQ Category](https://laraveldaily.com/wp-content/uploads/2019/10/Screen-Shot-2019-10-16-at-6.26.09-PM.png)
 
