@@ -5,6 +5,8 @@ to manage all the articles, categories.
 
 Also added SEO important stuff like Articles Slugs in URLs.
 
+Demo video: [https://www.youtube.com/watch?v=S2RRJqqvHEI](https://www.youtube.com/watch?v=S2RRJqqvHEI)
+
 - - - - -
 
 ## Front-side Screenshots 
