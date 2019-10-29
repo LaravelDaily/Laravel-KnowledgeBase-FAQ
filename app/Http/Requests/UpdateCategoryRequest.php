@@ -23,7 +23,7 @@ class UpdateCategoryRequest extends FormRequest
                 'required',
             ],
             'slug' => [
-                'required', 'unique:categories,slug,'.$this->route('article')->id
+                'required', 'unique:categories,slug,'.$this->route('category')->id
             ],
         ];
     }
