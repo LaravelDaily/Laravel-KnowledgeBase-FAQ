@@ -1,4 +1,4 @@
-# Laravel 6 Knowledge Base FAQ with Adminpanel
+# Laravel 8 Knowledge Base FAQ with Adminpanel
 
 Transformed [free Bootstrap theme](https://github.com/sunnyg1210/bootstrapKnowledgeBaseTheme) into fully manageable Laravel 6 project with adminpanel generated with [QuickAdminPanel](https://quickadminpanel.com), 
 to manage all the articles, categories.
