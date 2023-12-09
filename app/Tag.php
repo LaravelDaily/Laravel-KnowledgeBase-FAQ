@@ -26,11 +26,11 @@ class Tag extends Model
         'deleted_at',
     ];
 
-    public function articles()
+    public function articles():array
     {
         return $this->belongsToMany(Article::class);
     }
-    
+
     public function sluggable()
     {
         return [

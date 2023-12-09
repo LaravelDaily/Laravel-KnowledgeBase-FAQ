@@ -30,8 +30,8 @@ class Category extends Model
     {
         return $this->hasMany(Article::class);
     }
-    
-    public function sluggable()
+
+    public function sluggable():array
     {
         return [
             'slug' => [
