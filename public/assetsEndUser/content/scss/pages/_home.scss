@@ -1,0 +1,167 @@
+.app-types {
+  &__card {
+    overflow: hidden;
+
+    &:hover {
+      .app-types__card__img {
+        transform: scale(1.1);
+      }
+    }
+
+    &__img {
+      transition: all 0.6s ease-in-out;
+      display: block;
+      position: relative;
+    }
+
+    &__title {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+.about-section {
+  &__text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5em;
+
+    @include responsive(max, 992) {
+      font-size: 1rem;
+      line-height: normal;
+    }
+  }
+}
+
+.features {
+  background-color: #fcfcfc;
+
+  &__card {
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    &__icon {
+      transition: all 0.6s ease-in-out;
+      display: block;
+      text-align: center;
+      overflow: hidden;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &.features__card--see-more {
+      &:hover {
+        .see-more {
+          animation-name: shake;
+          animation-duration: 1.5s;
+          animation-fill-mode: both;
+        }
+      }
+    }
+
+    &.features__page {
+      .features__card__icon {
+        margin-bottom: 1rem;
+      }
+      .features__card__title {
+        color: $pinkColor;
+        text-align: center;
+      }
+      .features__card__desc {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+
+  .see-more {
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    z-index: 2;
+    font-size: 0.75rem;
+  }
+}
+
+.iphones {
+  &__card {
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    &:hover {
+      .iphones__card__img {
+        transform: scale(1.1);
+      }
+    }
+
+    &__img {
+      transition: all 0.6s ease-in-out;
+      display: block;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    &__title {
+      text-align: center;
+      color: $pinkColor;
+    }
+  }
+}
+
+.how-to-register {
+  &__card {
+    &__icon {
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+.download-app {
+  &__card {
+    &:hover {
+      .download-app__card__img {
+        transform: scale(1.1);
+      }
+    }
+
+    &__img {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}

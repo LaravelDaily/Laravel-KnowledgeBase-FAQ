@@ -3,15 +3,26 @@
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('categories/check_slug', 'CategoryController@check_slug')->name('categories.check_slug');
-Route::get('categories/{slug}/{category}', 'CategoryController@show')->name('categories.show');
-Route::get('tags/check_slug', 'TagController@check_slug')->name('tags.check_slug');
-Route::get('tags/{slug}/{tag}', 'TagController@show')->name('tags.show');
-Route::get('articles/check_slug', 'ArticleController@check_slug')->name('articles.check_slug');
-Route::get('articles/{slug}/{article}', 'ArticleController@show')->name('articles.show');
-Route::get('articles', 'ArticleController@index')->name('articles.index');
-Route::get('faq', 'FaqController@index')->name('faq.index');
+Route::group(['prefix' => '/', 'as' => 'endUser.'], function (){
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('parents', 'HomeController@parent')->name('parent');
+    Route::get('staff', 'HomeController@staff')->name('staff');
+    Route::get('packages', 'HomeController@packages')->name('packages');
+    Route::get('features', 'HomeController@features')->name('features');
+    Route::get('contact', 'HomeController@contactUs')->name('contact-us');
+    Route::get('about', 'HomeController@aboutUs')->name('about-us');
+    Route::get('faqs', 'HomeController@faqs')->name('faqs');
+    Route::get('article', 'HomeController@articles')->name('articles');
+    Route::get('categories/check_slug', 'CategoryController@check_slug')->name('categories.check_slug');
+    Route::get('categories/{slug}/{category}', 'CategoryController@show')->name('categories.show');
+    Route::get('tags/check_slug', 'TagController@check_slug')->name('tags.check_slug');
+    Route::get('tags/{slug}/{tag}', 'TagController@show')->name('tags.show');
+    Route::get('articles/check_slug', 'ArticleController@check_slug')->name('articles.check_slug');
+    Route::get('articles/{slug}/{article}', 'ArticleController@show')->name('articles.show');
+    Route::get('articles', 'ArticleController@index')->name('articles.index');
+    Route::get('faq', 'FaqController@index')->name('faq.index');
+});
+
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');

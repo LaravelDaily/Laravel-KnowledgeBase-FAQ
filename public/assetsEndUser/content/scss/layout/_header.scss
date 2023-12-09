@@ -1,0 +1,73 @@
+.header {
+  .owl-carousel--hero {
+    .owl-item.active {
+      .header__slide {
+        animation: zoom 1.8s forwards;
+      }
+    }
+  }
+
+  &__banar {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 3.5rem;
+      letter-spacing: 10px;
+      color: $pinkColor;
+      font-weight: bolder;
+      text-align: center;
+      text-transform: uppercase;
+
+      &.purple {
+        color: #7bd3df;
+      }
+      &.green {
+        color: #109533;
+      }
+      &.orange {
+        color: #fd9e00;
+      }
+    }
+
+    &__breadcrumb {
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        margin-inline: 1rem;
+        color: #000;
+        font-weight: 500;
+
+        a {
+          color: #000;
+        }
+      }
+      li:not(:first-child) {
+        color: $pinkColor;
+        position: relative;
+
+        &::before {
+          content: "/";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -1rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
