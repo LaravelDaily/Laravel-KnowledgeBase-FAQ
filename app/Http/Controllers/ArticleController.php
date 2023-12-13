@@ -17,6 +17,11 @@ class ArticleController extends Controller
         return view('articles.index', compact('articles'));
     }
 
+    public function single_article()
+    {
+        return view('endUser.single_article');
+    }
+
     public function show($slug, $article)
     {
         $article = Article::with(['tags', 'category'])
@@ -27,13 +32,13 @@ class ArticleController extends Controller
         $article->timestamps = false;
         $article->views_count++;
         $article->save();
-        
+
         return view('articles.show', compact('article'));
     }
 
     public function check_slug(Request $request)
     {
-        $slug = SlugService::createSlug(Article::class, 'slug', $request->input('title',''));
+        $slug = SlugService::createSlug(Article::class, 'slug', $request->input('title', ''));
 
         return response()->json(['slug' => $slug]);
     }

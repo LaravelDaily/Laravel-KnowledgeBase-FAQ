@@ -1,0 +1,106 @@
+.articles {
+    &__card {
+        &:nth-child(2) {
+            animation-delay: 100ms;
+        }
+
+        &__img {
+            display: block;
+            margin-bottom: 1;
+
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+        &__headding {
+            margin: 0;
+            margin-top: 1rem;
+            color: $pinkColor;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        &__date {
+            color: #ccc;
+            font-size: 0.75rem;
+        }
+
+        &__pragraph {
+            color: #646a6f;
+        }
+
+        &__action {
+            display: block;
+            color: $pinkColor;
+            font-weight: bold;
+            &__arrow {
+                transition: all 0.3s ease-in-out;
+                color: $pinkColor;
+            }
+
+            &:hover {
+                .articles__card__action__arrow {
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+}
+
+.single-article {
+    &__img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    &__content {
+        &__date {
+            display: block;
+            color: #c3c3c3;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        &__headding {
+            font-weight: bold;
+            color: $pinkColor;
+            margin-bottom: 1rem;
+        }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $pinkColor;
+            font-weight: bold;
+        }
+        ul li {
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+        ol li {
+            list-style-type: decimal;
+            list-style-position: inside;
+        }
+        ul ul li,
+        ol ul li {
+            list-style-type: circle;
+            list-style-position: inside;
+            margin-left: 15px;
+        }
+        ol ol li,
+        ul ol li {
+            list-style-type: lower-latin;
+            list-style-position: inside;
+            margin-left: 15px;
+        }
+    }
+}
