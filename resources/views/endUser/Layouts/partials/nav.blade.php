@@ -41,13 +41,13 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ route('endUser.faqs') }}">
-                <i class="las la-info"></i>
+                <i class="las la-question-circle"></i>
                 faqs
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ route('endUser.articles') }}">
-                <i class="las la-content"></i>
+                <i class="las la-newspaper"></i>
                 Article
             </a>
         </li>
