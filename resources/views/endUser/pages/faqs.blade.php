@@ -27,91 +27,25 @@
             <div class="row align-items-center g-3">
                 <div class="col-lg-6 mb-3 mb-lg-0 order-1">
                     <div id="accordionExample" class="accordion h-100">
-                        <div class="accordion-item">
-                            <h3 id="headingOne" class="accordion-header">
-                                <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sed!
-                                </button>
-                            </h3>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odit similique
-                                        cupiditate cum accusamus blanditiis beatae natus ipsam, facilis,
-                                    </p>
+                        @foreach($faqs as $faq)
+                            <div class="accordion-item">
+                                <h3 id="heading{{ $loop->iteration }}" class="accordion-header">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse{{ $loop->iteration }}" aria-expanded="true" aria-controls="collapse{{ $loop->iteration }}">
+                                       {{ $faq->question }}
+                                    </button>
+                                </h3>
+                                <div id="collapse{{ $loop->iteration }}" class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}" aria-labelledby="heading{{ $loop->iteration }}"
+                                     data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            {{ $faq->answer }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 id="headingTwo" class="accordion-header">
-                                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sed!
-                                </button>
-                            </h3>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odit similique
-                                        cupiditate cum accusamus blanditiis beatae natus ipsam, facilis,
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 id="headingThree" class="accordion-header">
-                                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sed!
-                                </button>
-                            </h3>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odit similique
-                                        cupiditate cum accusamus blanditiis beatae natus ipsam, facilis,
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 id="headingFour" class="accordion-header">
-                                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sed!
-                                </button>
-                            </h3>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odit similique
-                                        cupiditate cum accusamus blanditiis beatae natus ipsam, facilis,
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 id="headingfive" class="accordion-header">
-                                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sed!
-                                </button>
-                            </h3>
-                            <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odit similique
-                                        cupiditate cum accusamus blanditiis beatae natus ipsam, facilis,
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
                 <div class="col-lg-6 mb-3 mb-lg-0 order-lg-2">
@@ -121,7 +55,6 @@
                             title="">
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

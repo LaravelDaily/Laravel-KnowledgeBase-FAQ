@@ -7,7 +7,7 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 class CategoriesTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeders.
      *
      * @return void
      */

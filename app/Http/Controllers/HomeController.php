@@ -2,18 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Article;
+use App\FaqQuestion;
 
 class HomeController extends Controller
 {
     public function index()
     {
-//        $categories = Category::withCount('articles')
-//            ->with(['articles' => function($query) {
-//                $query->orderBy('id', 'desc');
-//            }])
-//            ->paginate(10);
-
         return view('endUser.index');
     }
 
@@ -48,11 +43,13 @@ class HomeController extends Controller
 
     public function faqs()
     {
-        return view('endUser.pages.faqs');
+        $faqs = FaqQuestion::get();
+        return view('endUser.pages.faqs', compact('faqs'));
     }
 
     public function articles()
     {
-        return view('endUser.pages.articles');
+        $articles = Article::paginate(10);
+        return view('endUser.pages.articles', compact('articles'));
     }
 }

@@ -17,9 +17,9 @@ class ArticleController extends Controller
         return view('articles.index', compact('articles'));
     }
 
-    public function single_article()
+    public function single_article(Article $article)
     {
-        return view('endUser.single_article');
+        return view('endUser.single_article', [ 'article'=>$article]);
     }
 
     public function show($slug, $article)
