@@ -1,0 +1,64 @@
+.faqs {
+    margin-bottom: 90px;
+
+    @include responsive(max, 992) {
+        margin-bottom: auto;
+    }
+
+    .accordion-item {
+        border-radius: 16px;
+        border: 1px solid #666;
+        overflow: auto;
+        margin-bottom: 16px;
+        padding: 16px;
+        transition: all 0.3s ease-in-out;
+
+        .accordion-button {
+            border: 0;
+            color: $pinkColor;
+            font-size: 16px;
+            font-weight: 700;
+            background: transparent;
+            text-align: start;
+            box-shadow: none;
+            padding: 0;
+
+            // &::after {
+            //     content: "\f078";
+            //     font-family: "LineAwesome";
+            //     transition: all 0.3s ease-in-out;
+            //     color: #000;
+            // }
+
+            &.collapsed {
+                color: #666;
+                font-weight: 500;
+            }
+        }
+
+        .accordion-body {
+            color: #4d4d4d;
+            padding: 0;
+            padding-top: 16px;
+            width: 95%;
+        }
+
+        &:has(.accordion-button:not(.collapsed)) {
+            border-color: $pinkColor;
+            box-shadow: 4px 8px 8px 0px rgba(9, 94, 166, 0.16);
+        }
+    }
+}
+
+@include responsive(max, 992) {
+    .faqs {
+        .accordion-button {
+            font-size: 14px;
+        }
+
+        .accordion-body {
+            padding-top: 8px;
+            font-size: 14px;
+        }
+    }
+}

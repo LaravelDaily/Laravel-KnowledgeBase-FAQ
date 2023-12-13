@@ -1,5 +1,5 @@
 @mixin responsive($type, $breakpoint) {
-  @media only screen and (#{$type}-width: #{$breakpoint}px) {
-    @content;
-  }
+    @media only screen and (#{$type}-width: #{$breakpoint}px) {
+        @content;
+    }
 }
