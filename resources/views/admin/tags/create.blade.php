@@ -46,8 +46,8 @@
 @section('scripts')
 <script>
   $('input[name="name"]').change(function(e) {
-    $.get('{{ route('tags.check_slug') }}', 
-      { 'name': $(this).val() }, 
+    $.get('{{ route('endUser.tags.check_slug') }}',
+      { 'name': $(this).val() },
       function( data ) {
         $('input[name="slug"]').val(data.slug);
       }

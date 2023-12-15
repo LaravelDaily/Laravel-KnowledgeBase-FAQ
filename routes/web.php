@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-//Route::redirect('/home', '/admin');
+Route::redirect('/home', '/admin');
+Route::redirect('/', '/login');
 Auth::routes(['register' => false]);
 
 Route::group([
@@ -34,7 +35,6 @@ Route::group([
     });
 
 });
-
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
@@ -71,3 +71,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('faq-questions/destroy', 'FaqQuestionController@massDestroy')->name('faq-questions.massDestroy');
     Route::resource('faq-questions', 'FaqQuestionController');
 });
+
+

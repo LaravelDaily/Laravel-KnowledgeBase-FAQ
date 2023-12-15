@@ -104,8 +104,8 @@
 @section('scripts')
 <script>
   $('input[name="title"]').change(function(e) {
-    $.get('{{ route('articles.check_slug') }}', 
-      { 'title': $(this).val() }, 
+    $.get('{{ route('endUser.articles.check_slug') }}',
+      { 'title': $(this).val() },
       function( data ) {
         $('input[name="slug"]').val(data.slug);
       }
