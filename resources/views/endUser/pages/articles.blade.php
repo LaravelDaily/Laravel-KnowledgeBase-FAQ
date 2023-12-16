@@ -29,7 +29,7 @@
                     <div class="col">
                         <div class="articles__card wow slideInUp">
                             <a href="{{ route('endUser.articles.single_article', $article->slug) }}" class="articles__card__img">
-                                <img src="{{ asset('assetsEndUser/content/assets/img/articles/blog-1.webp') }}" alt="">
+                                <img src="{{ $article->main_image }}" alt="{{$article->slug}}">
                             </a>
                             <a href="{{ route('endUser.articles.single_article', $article->slug) }}">
                                 <h4 class="articles__card__headding">

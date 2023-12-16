@@ -29,8 +29,8 @@
     {{-- Start Single Article  --}}
     <section class="single-article">
         <div class="container">
-            <img class="single-article__img" src="{{ asset('assetsEndUser/content/assets/img/articles/blog-1.webp') }}"
-                alt="">
+            <img class="single-article__img" src="{{ $article->main_image }}"
+                alt="{{ $article->slug }}">
             <div class="single-article__content pt-3">
                 <span class="single-article__content__date">
                     {{ $article->created_at }}
