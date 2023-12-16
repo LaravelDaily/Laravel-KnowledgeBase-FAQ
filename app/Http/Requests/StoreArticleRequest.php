@@ -31,6 +31,9 @@ class StoreArticleRequest extends FormRequest
             'tags'         => [
                 'array',
             ],
+            'short_text' => 'required|string',
+            'full_text' => 'required|string',
+            'image' => 'required|image|mimes:png,jpg,jpeg,webp'
         ];
     }
 }

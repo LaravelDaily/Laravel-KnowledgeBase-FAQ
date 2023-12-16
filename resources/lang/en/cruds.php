@@ -108,6 +108,7 @@ return [
             'id'                => 'ID',
             'id_helper'         => '',
             'title'             => 'Title',
+            'image'             => 'Main Image',
             'title_helper'      => '',
             'slug'              => 'Slug',
             'slug_helper'       => '',

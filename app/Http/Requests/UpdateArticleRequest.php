@@ -31,6 +31,8 @@ class UpdateArticleRequest extends FormRequest
             'tags'         => [
                 'array',
             ],
+            'full_text' => 'required|string',
+            'image' => 'nullable'
         ];
     }
 }

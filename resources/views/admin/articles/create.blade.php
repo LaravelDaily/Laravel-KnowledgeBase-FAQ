@@ -47,7 +47,7 @@
             </div>
             <div class="form-group {{ $errors->has('full_text') ? 'has-error' : '' }}">
                 <label for="full_text">{{ trans('cruds.article.fields.full_text') }}</label>
-                <textarea id="full_text" name="full_text" class="form-control ckeditor">{{ old('full_text', isset($article) ? $article->full_text : '') }}</textarea>
+                <textarea id="full_text" name="full_text" class="form-control">{{ old('full_text', isset($article) ? $article->full_text : '') }}</textarea>
                 @if($errors->has('full_text'))
                     <em class="invalid-feedback">
                         {{ $errors->first('full_text') }}
@@ -91,6 +91,15 @@
                     {{ trans('cruds.article.fields.tags_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('image') ? 'has-error' : '' }}">
+                <label for="file">{{ trans('cruds.article.fields.image') }}*</label>
+                <input type="file" id="file" name="image" class="form-control" required>
+                @if($errors->has('image'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('image') }}
+                    </em>
+                @endif
+            </div>
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>
@@ -112,4 +121,17 @@
     );
   });
 </script>
+<script src="{{ asset('assetsAdmin/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#full_text' ),{
+            ckfinder: {
+                uploadUrl: '{{route('admin.image-upload').'?_token='.csrf_token()}}',
+            }
+        })
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+
 @endsection

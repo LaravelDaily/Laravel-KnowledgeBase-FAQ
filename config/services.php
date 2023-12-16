@@ -29,5 +29,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    's3' => [
+        'url' => env('AWS_S3_URL',),
+    ],
+
 
 ];

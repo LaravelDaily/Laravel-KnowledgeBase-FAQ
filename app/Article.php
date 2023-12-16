@@ -10,6 +10,8 @@ class Article extends Model
 {
     use SoftDeletes, Sluggable;
 
+    const PATH = 'articles';
+
     public $table = 'articles';
 
     protected $dates = [
@@ -28,7 +30,17 @@ class Article extends Model
         'created_at',
         'updated_at',
         'deleted_at',
+        'main_image'
     ];
+
+    /**
+     * @param $value
+     * @return string
+     */
+    public function getMainImageAttribute($value): string
+    {
+        return config('services.s3.url'). DIRECTORY_SEPARATOR . self::PATH . DIRECTORY_SEPARATOR . $value;
+    }
 
     public function category()
     {

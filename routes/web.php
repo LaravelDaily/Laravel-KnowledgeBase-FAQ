@@ -66,6 +66,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Faq Categories
     Route::delete('faq-categories/destroy', 'FaqCategoryController@massDestroy')->name('faq-categories.massDestroy');
     Route::resource('faq-categories', 'FaqCategoryController');
+    Route::post('upload', 'ArticlesController@uploadImage')->name('image-upload');
 
     // Faq Questions
     Route::delete('faq-questions/destroy', 'FaqQuestionController@massDestroy')->name('faq-questions.massDestroy');

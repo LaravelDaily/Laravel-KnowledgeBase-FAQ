@@ -17,6 +17,7 @@
         "laravel/passport": "^10.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
         "mcamara/laravel-localization": "^1.8",
         "yajra/laravel-datatables-oracle": "^9.6"
     },
