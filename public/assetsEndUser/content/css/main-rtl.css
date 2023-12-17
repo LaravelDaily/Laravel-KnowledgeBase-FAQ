@@ -168,6 +168,19 @@ a {
   -webkit-box-shadow: 4px 8px 8px 0px rgba(9, 94, 166, 0.16);
           box-shadow: 4px 8px 8px 0px rgba(9, 94, 166, 0.16);
 }
+.faqs .nav-pills .nav-link {
+  color: #ed569f;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+}
+.faqs .nav-pills .nav-link.active {
+  background-color: transparent;
+  border-bottom-color: #ed569f;
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 992px) {
   .faqs .accordion-button {
