@@ -41,12 +41,6 @@ class HomeController extends Controller
         return view('endUser.pages.aboutUs');
     }
 
-    public function faqs()
-    {
-        $faqs = FaqQuestion::get();
-        return view('endUser.pages.faqs', compact('faqs'));
-    }
-
     public function articles()
     {
         $articles = Article::paginate(10);

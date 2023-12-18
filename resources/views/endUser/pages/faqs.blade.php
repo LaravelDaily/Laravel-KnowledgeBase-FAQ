@@ -25,101 +25,84 @@
     <section class="faqs">
         <div class="container">
             <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-carigory-1-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-carigory-1" type="button" role="tab" aria-controls="pills-carigory-1"
-                        aria-selected="true">carigory-1</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-carigory-2-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-carigory-2" type="button" role="tab" aria-controls="pills-carigory-2"
-                        aria-selected="false">carigory-2</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-carigory-3-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-carigory-3" type="button" role="tab" aria-controls="pills-carigory-3"
-                        aria-selected="false">carigory-3</button>
-                </li>
+                @foreach ($categories as $category)
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link {{ $loop->first ? 'active' : '' }}" id="pills-category-{{ $category->id }}-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-category-{{ $category->id }}"
+                                type="button" role="tab" aria-controls="pills-category-{{ $category->id }}"
+                                aria-selected="{{ $loop->first ? 'true' : 'false' }}"
+                                data-category-id="{{ $category->id }}">
+                            {{ $category->category }}
+                        </button>
+                    </li>
+                @endforeach
             </ul>
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-carigory-1" role="tabpanel"
-                    aria-labelledby="pills-carigory-1-tab" tabindex="0">
-                    <div id="accordionExample" class="accordion h-100">
-                        @foreach ($faqs as $faq)
-                            <div class="accordion-item">
-                                <h3 id="heading{{ $loop->iteration }}" class="accordion-header">
-                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse{{ $loop->iteration }}" aria-expanded="true"
-                                        aria-controls="collapse{{ $loop->iteration }}">
-                                        {{ $faq->question }}
-                                    </button>
-                                </h3>
-                                <div id="collapse{{ $loop->iteration }}"
-                                    class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}"
-                                    aria-labelledby="heading{{ $loop->iteration }}" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>
-                                            {{ $faq->answer }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
+                @foreach ($categories as $category)
+                <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" id="pills-category-{{ $category->id }}" role="tabpanel" aria-labelledby="pills-category-{{ $category->id }}-tab">
+
                 </div>
-                <div class="tab-pane fade" id="pills-carigory-2" role="tabpanel" aria-labelledby="pills-carigory-2-tab"
-                    tabindex="0">
-                    <div id="accordionExample" class="accordion h-100">
-                        @foreach ($faqs as $faq)
-                            <div class="accordion-item">
-                                <h3 id="heading{{ $loop->iteration }}" class="accordion-header">
-                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse{{ $loop->iteration }}" aria-expanded="true"
-                                        aria-controls="collapse{{ $loop->iteration }}">
-                                        {{ $faq->question }}
-                                    </button>
-                                </h3>
-                                <div id="collapse{{ $loop->iteration }}"
-                                    class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}"
-                                    aria-labelledby="heading{{ $loop->iteration }}" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>
-                                            {{ $faq->answer }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="pills-carigory-3" role="tabpanel" aria-labelledby="pills-carigory-3-tab"
-                    tabindex="0">
-                    <div id="accordionExample" class="accordion h-100">
-                        @foreach ($faqs as $faq)
-                            <div class="accordion-item">
-                                <h3 id="heading{{ $loop->iteration }}" class="accordion-header">
-                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse{{ $loop->iteration }}" aria-expanded="true"
-                                        aria-controls="collapse{{ $loop->iteration }}">
-                                        {{ $faq->question }}
-                                    </button>
-                                </h3>
-                                <div id="collapse{{ $loop->iteration }}"
-                                    class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}"
-                                    aria-labelledby="heading{{ $loop->iteration }}" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>
-                                            {{ $faq->answer }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
+                @endforeach
+{{--                <div class="tab-pane fade show active" id="pills-carigory-1" role="tabpanel"--}}
+{{--                    aria-labelledby="pills-carigory-1-tab" tabindex="0">--}}
+{{--                    <div id="accordionExample" class="accordion h-100">--}}
+{{--                        <div class="accordion-item">--}}
+{{--                                <h3 id="headingOne" class="accordion-header">--}}
+{{--                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"--}}
+{{--                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">--}}
+{{--                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sed!--}}
+{{--                                    </button>--}}
+{{--                                </h3>--}}
+{{--                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"--}}
+{{--                                     data-bs-parent="#accordionExample">--}}
+{{--                                    <div class="accordion-body">--}}
+{{--                                        <p>--}}
+{{--                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odit similique--}}
+{{--                                            cupiditate cum accusamus blanditiis beatae natus ipsam, facilis,--}}
+{{--                                        </p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </section>
 
     {{-- End Faqs Section  --}}
 @endsection
+
+@push('js')
+    <script !src="">
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.nav-link[data-category-id]');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const categoryId = this.getAttribute('data-category-id');
+
+                    fetch(`/faq-category/${categoryId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            // Assuming data is an array of FAQs
+                            const faqContent = data.map(faq =>
+                                `<div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${faq.id}">
+                                    ${faq.question}
+                                </button>
+                            </h3>
+                            <div id="collapse-${faq.id}" class="accordion-collapse collapse">
+                                <div class="accordion-body">${faq.answer}</div>
+                            </div>
+                        </div>`).join('');
+
+                            const tabContent = document.querySelector(`#pills-category-${categoryId}`);
+                            tabContent.innerHTML = `<div class="accordion h-100">${faqContent}</div>`;
+                        })
+                        .catch(error => console.error('Error:', error));
+                });
+            });
+        });
+    </script>
+@endpush

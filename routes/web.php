@@ -21,7 +21,6 @@ Route::group([
         Route::get('features', 'HomeController@features')->name('features');
         Route::get('contact', 'HomeController@contactUs')->name('contact-us');
         Route::get('about', 'HomeController@aboutUs')->name('about-us');
-        Route::get('faqs', 'HomeController@faqs')->name('faqs');
         Route::get('article', 'HomeController@articles')->name('articles');
         Route::get('categories/check_slug', 'CategoryController@check_slug')->name('categories.check_slug');
         Route::get('categories/{slug}/{category}', 'CategoryController@show')->name('categories.show');
@@ -31,7 +30,9 @@ Route::group([
         Route::get('articles/{slug}/{article}', 'ArticleController@show')->name('articles.show');
         Route::get('articles', 'ArticleController@index')->name('');
         Route::get('single_article/{article:slug}', 'ArticleController@single_article')->name('articles.single_article');
-        Route::get('faq', 'FaqController@index')->name('faq.index');
+        Route::get('faqs', 'FaqController@index')->name('faqs');
+        Route::get('/faq-category/{category}', 'FaqController@getFaqsByCategory')->name('faq.category');
+
     });
 
 });

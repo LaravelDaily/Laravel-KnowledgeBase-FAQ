@@ -18,3 +18,5 @@
 <script src="{{ asset('assetsEndUser/content/js/owl-init.js') }}"></script>
 <script src="{{ asset('assetsEndUser/content/js/wow-init.js') }}"></script>
 <script src="{{ asset('assetsEndUser/content/js/main.js') }}"></script>
+
+@stack('js')
