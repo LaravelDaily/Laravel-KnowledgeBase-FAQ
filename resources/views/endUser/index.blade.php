@@ -23,12 +23,12 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-5 col-lg-3 text-sm-center">
                     <div class="app-types__card">
-                        <a href="./parents.html" class="app-types__card__img zoom-eff">
+                        <a href="{{route('endUser.parent')}}" class="app-types__card__img zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/app-types/parents.webp') }}"
                                  alt="Parents Application" title="Parents Application">
                         </a>
                         <h4 class="app-types__card__title">
-                            <a href="./parents.html" class="main-heading-card">
+                            <a href="{{route('endUser.parent')}}" class="main-heading-card">
                                 Parents App
                             </a>
                         </h4>
@@ -36,12 +36,12 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-3 text-sm-center">
                     <div class="app-types__card">
-                        <a href="./stuff.html" class="app-types__card__img zoom-eff">
+                        <a href="{{route('endUser.staff')}}" class="app-types__card__img zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/app-types/stuff.webp') }}"
                                  alt="Stuff Application" title="Stuff Application">
                         </a>
                         <h4 class="app-types__card__title ">
-                            <a href="./stuff.html" class="main-heading-card">
+                            <a href="{{route('endUser.staff')}}" class="main-heading-card">
                                 Stuff App
                             </a>
                         </h4>
