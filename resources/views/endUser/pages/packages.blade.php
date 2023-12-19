@@ -24,24 +24,7 @@
     <section class="packages">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="packages__card">
-                        <h2>FREE</h2>
-                        <div class="packages__card__img zoom-eff mb-3">
-                            <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/packages/star.webp') }}" alt="Basic Packages"
-                                 title="Basic Packages">
-                        </div>
-                        <ul class="packages__card__list">
-                            <li>
-                                🤍 Parent Questions
-                            </li>
-                            <li>
-                                🤍 Notes
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-lg-4">
                     <div class="packages__card">
                         <h2>SILVER</h2>
                         <div class="packages__card__img zoom-eff mb-3">
@@ -50,27 +33,39 @@
                         </div>
                         <ul class="packages__card__list">
                             <li>
-                                🥈 Parent Questions
-                            </li>
-                            <li>
-                                🥈 Notes
+                                🥈 Staff Management
                             </li>
                             <li>
                                 🥈 Channel Book
                             </li>
                             <li>
+                                🥈 Food menu
+                            </li>
+                            <li>
                                 🥈 Attendance
                             </li>
                             <li>
-                                🥈 Reports
+                                🥈 Daily Reports
                             </li>
                             <li>
-                                🥈 Food Menu
+                                🥈 Notes
+                            </li>
+                            <li>
+                                🥈 Media
+                            </li>
+                            <li>
+                                🥈 Branding profile
+                            </li>
+                            <li>
+                                🥈 Parent app
+                            </li>
+                            <li>
+                                🥈 8 classes
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-lg-4">
                     <div class="packages__card">
                         <h2>GOLDEN</h2>
                         <div class="packages__card__img zoom-eff mb-3">
@@ -79,72 +74,141 @@
                         </div>
                         <ul class="packages__card__list">
                             <li>
-                                🥇 Parent Questions
-                            </li>
-                            <li>
-                                🥇 Notes
+                                🥇 Staff Management
                             </li>
                             <li>
                                 🥇 Channel Book
                             </li>
                             <li>
-                                🥇 Attendance Log
+                                🥇 Food menu
                             </li>
                             <li>
-                                🥇 Food Menu
+                                🥇 Attendance
                             </li>
                             <li>
-                                🥇 Academic
+                                🥇 Daily Reports
                             </li>
                             <li>
-                                🥇 Gallery
+                                🥇 Notes
                             </li>
                             <li>
-                                🥇 Cash In
+                                🥇 Media
                             </li>
                             <li>
-                                🥇 Cash Out
+                                🥇 Branding profile
                             </li>
                             <li>
-                                🥇 Birthdates
+                                🥇 Parent app
                             </li>
                             <li>
-                                🥇 Staff Management
+                                🥇 15 classes
                             </li>
                             <li>
-                                🥇 Attendance Report
+                                🥇Policy
+                            </li>
+                            <li>
+                                🥇News
+                            </li>
+                            <li>
+                                🥇Attendance reports
+                            </li>
+                            <li>
+                                🥇Academic
+                            </li>
+                            <li>
+                                🥇Media
+                            </li>
+                            <li>
+                                🥇Gallery
+                            </li>
+                            <li>
+                                🥇Staff login tracking
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-lg-4">
                     <div class="packages__card">
                         <h2>DIAMOND</h2>
                         <div class="packages__card__img zoom-eff mb-3">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/packages/diamond.webp') }}"
                                  alt="Diamond Packages" title="Diamond Packages">
                         </div>
-                        <h2 class="mt-5 pt-5">Comming Soon</h2>
+                        <ul class="packages__card__list">
+                            <li>
+                                🤍 Staff Management
+                            </li>
+                            <li>
+                                🤍 Channel Book
+                            </li>
+                            <li>
+                                🤍 Food menu
+                            </li>
+                            <li>
+                                🤍 Attendance
+                            </li>
+                            <li>
+                                🤍 Daily Reports
+                            </li>
+                            <li>
+                                🤍 Notes
+                            </li>
+                            <li>
+                                🤍 Media
+                            </li>
+                            <li>
+                                🤍 Branding profile
+                            </li>
+                            <li>
+                                🤍 Parent app
+                            </li>
+                            <li>
+                                🤍 unlimited classes
+                            </li>
+                            <li>
+                                🤍 Policy
+                            </li>
+                            <li>
+                                🤍 News
+                            </li>
+                            <li>
+                                🤍 Attendance reports
+                            </li>
+                            <li>
+                                🤍 Academic
+                            </li>
+                            <li>
+                                🤍 Media
+                            </li>
+                            <li>
+                                🤍 Gallery
+                            </li>
+                            <li>
+                                🤍 Staff login tracking
+                            </li>
+                            <li>
+                                🤍 Parent login tracking
+                            </li>
+                            <li>
+                                🤍 Birthday
+                            </li>
+                            <li>
+                                🤍 Cash in
+                            </li>
+                            <li>
+                                🤍 Cash out
+                            </li>
+                            <li>
+                                🤍 Notifications
+                            </li>
+                            <li>
+                                🤍 Payments
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End Packages Section -->
-
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center fw-medium mb-4">🌟 All Packages are Includes:</h2>
-            <p class="text-center fs-5 lh-lg fw-medium">
-                ✅ Unlimited Classes<br>
-                ✅ Unlimited Kids<br>
-                ✅ Nursery Logo<br>
-                ✅ Nursery Contacts<br>
-                ✅ Nursery Address<br>
-                ✅ Nursery Policy<br>
-                ✅ Customer Support<br>
-                ✅ Multi Users<br>
-            </p>
-        </div>
-    </section>
 @endsection
