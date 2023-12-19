@@ -55,7 +55,7 @@
                                 {{ $faqQuestion->question ?? '' }}
                             </td>
                             <td>
-                                {{ $faqQuestion->answer ?? '' }}
+                                {!! $faqQuestion->answer ?? '' !!}
                             </td>
                             <td>
                                 @can('faq_question_show')

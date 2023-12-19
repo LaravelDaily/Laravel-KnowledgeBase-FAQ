@@ -19,16 +19,9 @@ class StoreFaqQuestionRequest extends FormRequest
     public function rules()
     {
         return [
-            'category_id' => [
-                'required',
-                'integer',
-            ],
-            'question'    => [
-                'required',
-            ],
-            'answer'      => [
-                'required',
-            ],
+            'category_id' => 'required|integer|exists:faq_categories,id',
+            'question'    => 'required|string',
+            'answer'      => 'required|string',
         ];
     }
 }

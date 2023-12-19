@@ -35,8 +35,8 @@
                 </p>
             </div>
             <div class="form-group {{ $errors->has('answer') ? 'has-error' : '' }}">
-                <label for="answer">{{ trans('cruds.faqQuestion.fields.answer') }}*</label>
-                <textarea id="answer" name="answer" class="form-control " required>{{ old('answer', isset($faqQuestion) ? $faqQuestion->answer : '') }}</textarea>
+                <label for="full_text">{{ trans('cruds.faqQuestion.fields.answer') }}*</label>
+                <textarea id="full_text" name="answer" class="form-control">{!!   old('answer', isset($faqQuestion) ? $faqQuestion->answer : '') !!}</textarea>
                 @if($errors->has('answer'))
                     <em class="invalid-feedback">
                         {{ $errors->first('answer') }}
@@ -54,4 +54,19 @@
 
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('assetsAdmin/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#full_text' ),{
+                ckfinder: {
+                    uploadUrl: '{{route('admin.image-upload').'?_token='.csrf_token()}}',
+                }
+            })
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 @endsection

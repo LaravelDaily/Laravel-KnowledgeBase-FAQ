@@ -34,7 +34,7 @@ class FaqQuestionController extends Controller
 
     public function store(StoreFaqQuestionRequest $request)
     {
-        $faqQuestion = FaqQuestion::create($request->all());
+       FaqQuestion::create($request->all());
 
         return redirect()->route('admin.faq-questions.index');
     }
