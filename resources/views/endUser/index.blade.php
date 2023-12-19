@@ -77,12 +77,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/book.avif') }}" alt="Channel Book"
                                  title="Channel Book" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Channel Book
                             </a>
                         </h5>
@@ -90,12 +90,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/children.avif') }}" alt="Profile"
                                  title="Profile" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Profile
                             </a>
                         </h5>
@@ -103,12 +103,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/notepad.webp') }}" alt="Notes"
                                  title="Notes" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Notes
                             </a>
                         </h5>
@@ -116,12 +116,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/abc-block.webp') }}" alt="Academy"
                                  title="Academy" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Academy
                             </a>
                         </h5>
@@ -129,12 +129,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/family.webp') }}" alt="Gallery"
                                  title="Gallery" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Gallery
                             </a>
                         </h5>
@@ -142,12 +142,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/expenses.webp') }}" alt="Cash In-Out"
                                  title="Cash In-Out" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Cash In-Out
                             </a>
                         </h5>
@@ -155,12 +155,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/apple.webp') }}" alt="Food Menu"
                                  title="Food Menu" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Food Menu
                             </a>
                         </h5>
@@ -168,12 +168,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/cupcake.webp') }}" alt="Birthday"
                                  title="Birthday" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Birthday
                             </a>
                         </h5>
@@ -181,12 +181,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/mentor.webp') }}"
                                  alt="Staff Management" title="Staff Management" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Staff Management
                             </a>
                         </h5>
@@ -194,12 +194,12 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="features__card">
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/attendance.webp') }}" alt="Attendance"
                                  title="Attendance" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 Attendance
                             </a>
                         </h5>
@@ -208,12 +208,12 @@
                 <div class="col-6 col-md-3">
                     <div class="features__card features__card--see-more">
                         <span class="see-more">See More</span>
-                        <a href="./features.html" class="features__card__icon zoom-eff">
+                        <a href="{{ route('endUser.features') }}" class="features__card__icon zoom-eff">
                             <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/features/see-more.webp') }}" alt="And more"
                                  title="And more" width="127">
                         </a>
                         <h5 class="features__card__title">
-                            <a class="main-heading-card" href="./features.html">
+                            <a class="main-heading-card" href="{{ route('endUser.features') }}">
                                 And more...
                             </a>
                         </h5>
