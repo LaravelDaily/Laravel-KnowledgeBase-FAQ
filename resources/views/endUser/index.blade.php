@@ -447,6 +447,16 @@
                 </div>
                 <div class="col-12 col-md-3">
                     <div class="download-app__card">
+                        <a href="https://apps.apple.com/eg/app/kiddowz-for-staff/id6466301699" target="_blank">
+                            <div class="download-app__card__img zoom-eff">
+                                <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/app-store-icon.avif') }}" alt="app store"
+                                     title="app store">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="download-app__card">
                         <a href="https://play.google.com/store/apps/details?id=com.kiddowz.nurseryapp">
                             <div class="download-app__card__img zoom-eff">
                                 <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/google-play-icon.avif') }}"
