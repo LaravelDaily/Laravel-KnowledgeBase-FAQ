@@ -186,6 +186,169 @@ a {
     font-size: 14px;
   }
 }
+.whatsapp {
+  position: fixed;
+  bottom: 3%;
+  left: 3%;
+  z-index: 100;
+}
+.whatsapp__icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #25d366;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.whatsapp__icon i {
+  font-size: 3.5rem;
+}
+.whatsapp__icon:hover .whatsapp__tooltip {
+  opacity: 1;
+}
+.whatsapp__tooltip {
+  position: absolute;
+  top: 14px;
+  left: 76px;
+  max-width: calc(100vw - 105px);
+  height: 32px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 31px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out 0.4s;
+  transition: opacity 0.3s ease-out 0.4s;
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+  pointer-events: none;
+}
+.whatsapp__tooltip::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -6px;
+  border: 8px solid transparent;
+  border-right-color: #fff;
+  border-top-width: 6px;
+  border-right-width: 8px;
+  border-bottom-width: 6px;
+  border-left-width: 0;
+}
+.whatsapp .whatsapp__popup {
+  display: block;
+  min-width: 300px;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  border-radius: 1.25rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+.whatsapp .whatsapp__popup.is-active-whatsapp-popup {
+  opacity: 1;
+  z-index: 1;
+}
+.whatsapp .whatsapp__popup__top {
+  background-color: #25d366;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+.whatsapp .whatsapp__popup__top h5 {
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+.whatsapp .whatsapp__popup__top button {
+  border: 0;
+  background-color: transparent;
+  font-size: 1.7rem;
+  color: #fff;
+}
+.whatsapp .whatsapp__popup__bottom {
+  padding: 1.5rem;
+}
+.whatsapp .whatsapp__popup__bottom__message {
+  position: relative;
+  min-height: 50px;
+  padding: 12px;
+  margin: 0px 0px 27px;
+  border-radius: 32px;
+  background: #fff;
+  color: #4a4a4a;
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+.whatsapp .whatsapp__popup__bottom__message::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -12px;
+  border: 8px solid transparent;
+  border-right-color: #fff;
+  border-top-width: 6px;
+  border-right-width: 15px;
+  border-bottom-width: 6px;
+  border-left-width: 0;
+}
+.whatsapp .whatsapp__popup__bottom .whats-input {
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  padding-right: 50px;
+  border-radius: 2rem;
+  border-width: 1px;
+}
+.whatsapp .whatsapp__popup__bottom .send-msPopup {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #25d366;
+  color: #fff;
+}
+
 .header .owl-carousel--hero .owl-item.active .header__slide {
   -webkit-animation: zoom 1.8s forwards;
           animation: zoom 1.8s forwards;

@@ -28,8 +28,9 @@
                     <div class="packages__card">
                         <h2>SILVER</h2>
                         <div class="packages__card__img zoom-eff mb-3">
-                            <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/packages/silver.webp') }}" alt="Silver Packages"
-                                 title="Silver Packages">
+                            <img class="img-fluid"
+                                src="{{ asset('assetsEndUser/content/assets/img/packages/silver.webp') }}"
+                                alt="Silver Packages" title="Silver Packages">
                         </div>
                         <ul class="packages__card__list">
                             <li>
@@ -69,8 +70,8 @@
                     <div class="packages__card">
                         <h2>GOLDEN</h2>
                         <div class="packages__card__img zoom-eff mb-3">
-                            <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/packages/gold.webp') }}" alt="Gold Packages"
-                                 title="Gold Packages">
+                            <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/packages/gold.webp') }}"
+                                alt="Gold Packages" title="Gold Packages">
                         </div>
                         <ul class="packages__card__list">
                             <li>
@@ -131,78 +132,79 @@
                     <div class="packages__card">
                         <h2>DIAMOND</h2>
                         <div class="packages__card__img zoom-eff mb-3">
-                            <img class="img-fluid" src="{{ asset('assetsEndUser/content/assets/img/packages/diamond.webp') }}"
-                                 alt="Diamond Packages" title="Diamond Packages">
+                            <img class="img-fluid"
+                                src="{{ asset('assetsEndUser/content/assets/img/packages/diamond.webp') }}"
+                                alt="Diamond Packages" title="Diamond Packages">
                         </div>
                         <ul class="packages__card__list">
                             <li>
-                                🤍 Staff Management
+                                💎 Staff Management
                             </li>
                             <li>
-                                🤍 Channel Book
+                                💎 Channel Book
                             </li>
                             <li>
-                                🤍 Food menu
+                                💎 Food menu
                             </li>
                             <li>
-                                🤍 Attendance
+                                💎 Attendance
                             </li>
                             <li>
-                                🤍 Daily Reports
+                                💎 Daily Reports
                             </li>
                             <li>
-                                🤍 Notes
+                                💎 Notes
                             </li>
                             <li>
-                                🤍 Media
+                                💎 Media
                             </li>
                             <li>
-                                🤍 Branding profile
+                                💎 Branding profile
                             </li>
                             <li>
-                                🤍 Parent app
+                                💎 Parent app
                             </li>
                             <li>
-                                🤍 unlimited classes
+                                💎 unlimited classes
                             </li>
                             <li>
-                                🤍 Policy
+                                💎 Policy
                             </li>
                             <li>
-                                🤍 News
+                                💎 News
                             </li>
                             <li>
-                                🤍 Attendance reports
+                                💎 Attendance reports
                             </li>
                             <li>
-                                🤍 Academic
+                                💎 Academic
                             </li>
                             <li>
-                                🤍 Media
+                                💎 Media
                             </li>
                             <li>
-                                🤍 Gallery
+                                💎 Gallery
                             </li>
                             <li>
-                                🤍 Staff login tracking
+                                💎 Staff login tracking
                             </li>
                             <li>
-                                🤍 Parent login tracking
+                                💎 Parent login tracking
                             </li>
                             <li>
-                                🤍 Birthday
+                                💎 Birthday
                             </li>
                             <li>
-                                🤍 Cash in
+                                💎 Cash in
                             </li>
                             <li>
-                                🤍 Cash out
+                                💎 Cash out
                             </li>
                             <li>
-                                🤍 Notifications
+                                💎 Notifications
                             </li>
                             <li>
-                                🤍 Payments
+                                💎 Payments
                             </li>
                         </ul>
                     </div>
