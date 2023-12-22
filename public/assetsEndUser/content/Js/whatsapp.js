@@ -16,7 +16,7 @@ popupWhatsApp = () => {
         let msg = document.getElementById("whats-input").value;
         let relmsg = msg.replace(/ /g, "%20");
         //just change the numbers "01022674132" for your number
-        window.open("https://wa.me/01022674132?text=" + relmsg, "_blank");
+        window.open("https://wa.me/+201155777100=" + relmsg, "_blank");
     });
 };
 
